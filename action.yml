@@ -82,6 +82,12 @@ inputs:
   releaseBranch:
     required: false
     description: 'The branch within steam that this build will be automatically put live on.'
+  runAsHostUser:
+    required: false
+    default: 'false'
+    description:
+      'Whether to run as a user that matches the host system or the default root container user. Only applicable to
+      Linux hosts and containers. This is useful for fixing permission errors on Self-Hosted runners.'
   debugBranch:
     required: false
     description: 'If set to true, include debug symbols and directories in the upload'
@@ -119,4 +125,5 @@ runs:
     depot9Path: ${{ inputs.depot9Path }}
     depot9InstallScriptPath: ${{ inputs.depot9InstallScriptPath }}
     releaseBranch: ${{ inputs.releaseBranch }}
+    runAsHostUser: ${{ inputs.runAsHostUser }}
     debugBranch: ${{ inputs.debugBranch }}
