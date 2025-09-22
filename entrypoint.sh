@@ -1,3 +1,4 @@
+#!/bin/bash
 fullProjectPath="$GITHUB_WORKSPACE/$PROJECT_PATH"
 
 if [[ "$runAsHostUser" == "true" ]]; then
