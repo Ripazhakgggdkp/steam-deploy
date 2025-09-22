@@ -1,3 +1,5 @@
+fullProjectPath="$GITHUB_WORKSPACE/$PROJECT_PATH"
+
 if [[ "$runAsHostUser" == "true" ]]; then
   echo "Running as host user"
 
