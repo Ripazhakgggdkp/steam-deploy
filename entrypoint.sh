@@ -27,10 +27,10 @@ if [[ "$runAsHostUser" == "true" ]]; then
   set +e
 
   # Switch to the host user so we can create files with the correct ownership
-  su $USERNAME -c "$SHELL -c './steam_deploy.sh'"
+  su $USERNAME -c "$SHELL -c '/root/steam_deploy.sh'"
 else
   echo "Running as root"
 
   # Run as root
-  source ./steam_deploy.sh
+  source /root/steam_deploy.sh
 fi
